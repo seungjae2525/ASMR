@@ -1,13 +1,31 @@
 Package: ASMR
-Title: What the Package Does (One Line, Title Case)
-Version: 0.0.0.9000
-Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"))
+Title: Analysis of Selection-biased Matched data in R
+Version: 0.0.1
 Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
-    license
+License: GPL (>= 3) + file LICENSE
+URL: https://github.com/seungjae2525/ASMR
+BugReports: https://github.com/seungjae2525/ASMR/issues
+Depends: R (>= 4.2.0)
+Imports: base, gnm, parallel, stats, survival
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2
-URL: https://github.com/seungjae2525/ASMR
-BugReports: https://github.com/seungjae2525/ASMR/issues
+NeedsCompilation: no
+Authors@R: 
+  c(person(given = "Seungjae",
+           family = "Lee",
+           role = c("aut", "cre"),
+           email = "seungjae2525@gmail.com",
+           comment = c(ORCID = "0000-0001-5508-8634")),
+    person(given = "Hyunman",
+           family = "Sim",
+           role = "aut",
+           comment = c(ORCID = "0009-0000-4769-4749")),
+    person(given = "Woojoo",
+           family = "Lee",
+           role = "aut",
+           comment = c(ORCID = "0000-0001-7447-7045")))
+Author: Seungjae Lee [aut, cre] (<https://orcid.org/0000-0001-5508-8634>),
+    Hyunman Sim [aut] (<https://orcid.org/0009-0000-4769-4749>),
+    Woojoo Lee [aut] (<https://orcid.org/0000-0001-7447-7045>)
+Maintainer: Seungjae Lee <seungjae2525@gmail.com>
