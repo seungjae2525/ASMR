@@ -9,6 +9,7 @@ asmrCPR <- function(data, Y, X, ID, Lambda1, Lambda2, level = 0.95,
   summary_CPR_s <- summary(object = CPR_s)
   EST <- summary_CPR_s$coefficients[[1]]
   SE <- sqrt(x = summary_CPR_s$coefficients[[2]])
+  CI_s <- as.vector(confint.default(CPR_s))
 
   ## Convert to a structured dataset
   data_old <- make_data_wide(data = data, Y = Y, X = X, ID = ID)
@@ -135,9 +136,9 @@ asmrCPR <- function(data, Y, X, ID, Lambda1, Lambda2, level = 0.95,
   SE_robust_upper <- sqrt(x = var.upper)
 
   ## Return results
-  final.result <- list(data = data, Y = Y, X = X, ID = ID,
+  final.result <- list(data = data, Y = Y, X = X, ID = ID, level = level,
                        Lambda1 = Lambda1, Lambda2 = Lambda2,
-                       EST = EST, SE = SE,
+                       EST = EST, SE = SE, CI_s = CI_s,
                        SI = c(SI_lower = beta_min, SI_upper = beta_max),
                        CI = c(CI_lower = beta_min - qnorm(p = 1 - (1 - level) / 2) * SE_robust_lower,
                               CI_upper = beta_max + qnorm(p = 1 - (1 - level) / 2) * SE_robust_upper),

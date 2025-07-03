@@ -4,10 +4,14 @@
 \alias{print.asmr}
 \title{Print for \code{asmr} objects}
 \usage{
-\method{print}{asmr}(x, ...)
+\method{print}{asmr}(x, logscale = FALSE, digits = max(1L, getOption("digits") - 3L), ...)
 }
 \arguments{
 \item{x}{An object for class \code{asmr}.}
+
+\item{logscale}{Whether to report results on a log odds ratio or log risk ratio scale. Default: \code{logscale = FALSE} (i.e., not log scale).}
+
+\item{digits}{Print digits. Default:  \code{digits = max(1L, getOption("digits") - 3L)}.}
 
 \item{...}{Further arguments (currently not used).}
 }
@@ -29,6 +33,6 @@ backPainLong <- gnm::expandCategorical(backPain, "pain")
 
 }
 \seealso{
-\code{\link[ASMR]{asmr}}, \code{\link[ASMR]{summary.asmr}}, \code{\link[base]{print}}
+\code{\link[ASMR]{asmr}}, \code{\link[base]{print}}
 }
 \keyword{print}

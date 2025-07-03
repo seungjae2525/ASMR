@@ -44,20 +44,19 @@ An object of class \code{asmr}. The object is a list with the following componen
 \item{Y}{The \code{Y} argument.}
 \item{X}{The \code{X} argument.}
 \item{ID}{The \code{ID} argument.}
-\item{EST}{It is the maximum likelihood estimate (MLE) \eqn{\widehat{\beta}} from conditional logistic or Poisson regression for selection-biased matched data.}
-\item{SE}{It is the standard error \eqn{\text{se}(\widehat{\beta})} from conditional logistic regression or Poisson for selection-biased matched data.}
 \item{Lambda1}{The \code{Lambda1} argument (\eqn{\Lambda_{1}}).}
 \item{Lambda2}{The \code{Lambda2} argument (\eqn{\Lambda_{2}}).}
+\item{EST}{It is the maximum likelihood estimate (MLE) \eqn{\widehat{\beta}} from conditional logistic or Poisson regression for selection-biased matched data.}
+\item{SE}{It is the standard error \eqn{\text{se}(\widehat{\beta})} from conditional logistic regression or Poisson for selection-biased matched data.}
 \item{SI}{Sensitivity interval.}
 \item{CI}{Confidence interval for the population sensitivity interval.}
 
-In addition, the following components exist for \code{method = "CPR"}:
-\item{Rik_unique_comb_len}{The number of all possible combinations of \eqn{R^{\ast}} for optimization problem.}
+In addition, the following additional components exist for \code{method = "CPR"}:
+\item{Rik_unique_comb_len}{The number of all possible combinations of \eqn{\bm{R}^{\ast}} for optimization problem.}
 \item{SE_robust}{The robust standard errors for the lower and upper bounds of the sensitivity interval.}
 \item{Rik}{The set of sensitivity parameters \eqn{\bm{R}^{\ast}} for the lower and upper bounds of the sensitivity interval.}
 
 The results for the \code{asmr} are printed with the \code{\link[ASMR]{print.asmr}} function.
-Also, the results for the \code{asmr} are summarized with the \code{\link[ASMR]{summary.asmr}} function.
 }
 \description{
 \code{asmr()} is the main function of \bold{ASMR} package.
@@ -105,6 +104,6 @@ backPainLong <- gnm::expandCategorical(backPain, "pain")
 Lee, S., Sim, H., and Lee, W. (2025). Developing statistical methods for selection-biased matched data.
 }
 \seealso{
-\code{\link[ASMR]{print.asmr}}, \code{\link[ASMR]{summary.asmr}}
+\code{\link[ASMR]{print.asmr}}
 }
 \keyword{methods}

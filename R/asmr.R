@@ -67,7 +67,6 @@ asmr <- function(...) UseMethod("asmr")
 #' \item{Rik}{The set of sensitivity parameters \eqn{\bm{R}^{\ast}} for the lower and upper bounds of the sensitivity interval.}
 #'
 #' The results for the \code{asmr} are printed with the \code{\link[ASMR]{print.asmr}} function.
-#' Also, the results for the \code{asmr} are summarized with the \code{\link[ASMR]{summary.asmr}} function.
 #'
 #'
 #' @examples
@@ -78,7 +77,7 @@ asmr <- function(...) UseMethod("asmr")
 #'
 #'
 #' @seealso
-#'  \code{\link[ASMR]{print.asmr}}, \code{\link[ASMR]{summary.asmr}}
+#'  \code{\link[ASMR]{print.asmr}}
 #'
 #'
 #' @references
